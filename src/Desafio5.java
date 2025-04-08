@@ -8,5 +8,6 @@ public class Desafio5 {
         double salario = scanner.nextDouble();
         double percentualAumento;
 
+
     }
 }
