@@ -20,6 +20,8 @@ public class Desafio4 {
             percentualAumento = (double)5.0F;
         }
 
+
+
         double valorAumento = salario * (percentualAumento / (double)100.0F);
         double novoSalario = salario + valorAumento;
         double inflacao = 3.8;
