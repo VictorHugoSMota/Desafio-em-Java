@@ -38,7 +38,7 @@ public class Desafio5 {
 
         } while (continuar.equalsIgnoreCase("s"));
 
-        System.out.println("\nPrograma encerrado.");
+        System.out.println("\nPrograma encerrado. ");
         scanner.close();
     }
 }
