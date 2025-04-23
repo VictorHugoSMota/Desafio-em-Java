@@ -1,35 +1,44 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler
 import java.util.Scanner;
 
 public class Desafio5 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Digite o seu salário:");
-        double salario = scanner.nextDouble();
-        double percentualAumento;
-        if (salario <= (double)280.0F) {
-            percentualAumento = (double)20.0F;
-        } else if (salario <= (double)700.0F) {
-            percentualAumento = (double)15.0F;
-        } else if (salario <= (double)1500.0F) {
-            percentualAumento = (double)10.0F;
-        } else {
-            percentualAumento = (double)5.0F;
-        }
+        String continuar;
 
+        do {
+            System.out.print("Digite o seu salário: ");
+            double salario = scanner.nextDouble();
 
+            double percentualAumento;
 
-        double valorAumento = salario * (percentualAumento / (double)100.0F);
-        double novoSalario = salario + valorAumento;
-        double inflacao = 3.8;
-        double aumentoReal = valorAumento - salario * (inflacao / (double)100.0F);
-        System.out.println("\nSalário antes do reajuste: R$ " + salario);
-        System.out.println("Percentual de aumento aplicado: " + percentualAumento + "%");
-        System.out.println("Valor do aumento: R$ " + valorAumento);
-        System.out.println("Novo salário após aumento: R$ " + novoSalario);
-        System.out.println("Valor do aumento do real (descontando a inflação): R$ " + aumentoReal);
+            if (salario <= 280.0) {
+                percentualAumento = 20.0;
+            } else if (salario <= 700.0) {
+                percentualAumento = 15.0;
+            } else if (salario <= 1500.0) {
+                percentualAumento = 10.0;
+            } else {
+                percentualAumento = 5.0;
+            }
+
+            double valorAumento = salario * (percentualAumento / 100.0);
+            double novoSalario = salario + valorAumento;
+            double inflacao = 3.8;
+            double aumentoReal = valorAumento - salario * (inflacao / 100.0);
+
+            System.out.println("\nSalário antes do reajuste: R$ " + salario);
+            System.out.println("Percentual de aumento aplicado: " + percentualAumento + "%");
+            System.out.println("Valor do aumento: R$ " + valorAumento);
+            System.out.println("Novo salário após aumento: R$ " + novoSalario);
+            System.out.println("Valor do aumento real (descontando a inflação): R$ " + aumentoReal);
+
+            System.out.print("\nDeseja calcular outro salário? (s/n): ");
+            continuar = scanner.next();
+
+        } while (continuar.equalsIgnoreCase("s"));
+
+        System.out.println("\nPrograma encerrado.");
+        scanner.close();
     }
 }
