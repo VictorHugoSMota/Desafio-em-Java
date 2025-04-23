@@ -7,7 +7,7 @@ public class Desafio5 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Digite o seu salário:  ");
+        System.out.print("Digite o seu salário:");
         double salario = scanner.nextDouble();
         double percentualAumento;
         if (salario <= (double)280.0F) {
@@ -30,6 +30,6 @@ public class Desafio5 {
         System.out.println("Percentual de aumento aplicado: " + percentualAumento + "%");
         System.out.println("Valor do aumento: R$ " + valorAumento);
         System.out.println("Novo salário após aumento: R$ " + novoSalario);
-        System.out.println("Valor do aumento real (descontando a inflação): R$ " + aumentoReal);
+        System.out.println("Valor do aumento do real (descontando a inflação): R$ " + aumentoReal);
     }
 }
